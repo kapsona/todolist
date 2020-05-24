@@ -1,0 +1,27 @@
+.inputForm {
+  form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    .taskInput {
+      flex: 1;
+      padding: 5px;
+      font-size: 15px;
+      border-radius: 3px 0px 0px 3px;
+      border: 2px solid #ccc;
+      border-right: none;
+      outline: none;
+    }
+    .saveBtn {
+      background-color: #456788;
+      border: none;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      border-radius: 0px 3px 3px 0px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}

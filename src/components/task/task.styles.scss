@@ -1,0 +1,49 @@
+.task-item {
+  background-color: #f9f9f9;
+  margin: 1px 0px;
+  text-align: left;
+  border: 1px solid #f0f0f0;
+  padding: 10px;
+  border-radius: 3px;
+  transition: all 0.1s ease;
+
+  &.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+}
+
+.completed {
+  color: #666;
+  text-decoration: line-through;
+  transition: all 0.2s ease;
+}
+
+.action-btn {
+  float: right;
+}
+
+.edit-btn {
+  background-color: #456788;
+  color: #fff;
+  outline: none;
+  border: none;
+  margin-right: 2px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: red;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  background-color: #333;
+}
