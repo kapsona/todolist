@@ -41,6 +41,12 @@ class App extends Component {
     this.setState({ todos: curState });
   };
 
+  handleEdit = (itm) => {
+    const newList = this.state.todos.filter((item) => item !== itm);
+
+    this.setState({ todo: itm.task, todos: newList });
+  };
+
   handleDelete = (indx, itm) => {
     const curState = this.state.todos;
     const newItem = { ...itm, isComplete: !itm.isComplete, deleting: "fall" };
@@ -73,6 +79,7 @@ class App extends Component {
           tasks={todos}
           toggler={this.toggleComplete}
           handleDelete={this.handleDelete}
+          handleEdit={this.handleEdit}
         />
         {todos.length >= 1 && (
           <button className="btn-red" onClick={this.clearList}>

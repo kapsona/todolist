@@ -1,7 +1,7 @@
 import React from "react";
 import "./task.styles.scss";
 
-const Task = ({ index, task, toggler, handleDelete }) => {
+const Task = ({ index, task, toggler, handleDelete, handleEdit }) => {
   return (
     <li className={`task-item ${task.deleting}`}>
       <span
@@ -11,7 +11,9 @@ const Task = ({ index, task, toggler, handleDelete }) => {
         {task.task}
       </span>
       <div className="action-btn">
-        <button className="edit-btn">Edit</button>
+        <button className="edit-btn" onClick={() => handleEdit(task)}>
+          Edit
+        </button>
         <button
           onClick={() => handleDelete(index, task)}
           className="delete-btn"

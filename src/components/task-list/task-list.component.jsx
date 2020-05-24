@@ -3,7 +3,7 @@ import "./task-list.styles.scss";
 
 import Task from "../task/task.component";
 
-const TaskList = ({ tasks, toggler, handleDelete, deleting }) => {
+const TaskList = ({ tasks, toggler, handleDelete, handleEdit }) => {
   return (
     <div>
       {tasks.length >= 1 ? (
@@ -20,6 +20,7 @@ const TaskList = ({ tasks, toggler, handleDelete, deleting }) => {
               task={tas}
               toggler={toggler}
               handleDelete={handleDelete}
+              handleEdit={handleEdit}
             />
           );
         })}
