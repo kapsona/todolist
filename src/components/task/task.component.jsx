@@ -11,9 +11,11 @@ const Task = ({ index, task, toggler, handleDelete, handleEdit }) => {
         {task.task}
       </span>
       <div className="action-btn">
-        <button className="edit-btn" onClick={() => handleEdit(task)}>
-          Edit
-        </button>
+        {!task.isComplete && (
+          <button className="edit-btn" onClick={() => handleEdit(task)}>
+            Edit
+          </button>
+        )}
         <button
           onClick={() => handleDelete(index, task)}
           className="delete-btn"
